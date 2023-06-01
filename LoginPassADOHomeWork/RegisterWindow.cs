@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.Configuration;
-using System.Data;
 using System.Data.SqlClient;
 
 namespace LoginPassADOHomeWork
@@ -7,7 +6,6 @@ namespace LoginPassADOHomeWork
     public partial class RegisterWindow : Form
     {
 
-        SqlConnection connection = null;
         string connectionString;
 
         public RegisterWindow()
@@ -20,27 +18,61 @@ namespace LoginPassADOHomeWork
             var config = builder.Build();
             connectionString = config.GetConnectionString("DefaultConnection")!;
 
-            connection = new SqlConnection(connectionString);
         }
 
         private void SignUpBtn_Click(object sender, EventArgs e)
         {
             if (usernameTextBox.Text != string.Empty && passwordTextBox.Text != string.Empty && emailTextBox.Text != string.Empty)
             {
-                using (SqlConnection connection = new(connectionString))
+
+                string username = usernameTextBox.Text;
+                string password = passwordTextBox.Text;
+                string email = emailTextBox.Text;
+                try
                 {
-                    string username = "";
-                    SqlParameter parameter = new SqlParameter();
-                    string insertQuery = @"INSERT INTO [User] (Username, [Password], EMail) VALUES(@username, @password, @email)";
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
 
-                    SqlCommand insertCommand = new();
-                    insertCommand.Connection = connection;
-                    insertCommand.CommandText = insertQuery;
+                        string query = "INSERT INTO [User] (Username, [Password], EMail) VALUES(@username, @password, @email)";
+                        SqlCommand insertQuery = new SqlCommand(query, connection);
 
-                    connection.Open();
-                    insertCommand.ExecuteNonQuery();
+                        insertQuery.Parameters.AddWithValue("@username", username);
+                        insertQuery.Parameters.AddWithValue("@password", password);
+                        insertQuery.Parameters.AddWithValue("@email", email);
+
+                        insertQuery.ExecuteNonQuery();
+                    }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+
+                }
+                finally
+                {
+                    usernameTextBox.Text = string.Empty;
+                    passwordTextBox.Text = string.Empty;
+                    emailTextBox.Text = string.Empty;
+                }
+
             }
+            else
+            {
+                MessageBox.Show("Write all options");
+                usernameTextBox.Text = string.Empty;
+                passwordTextBox.Text = string.Empty;
+                emailTextBox.Text = string.Empty;
+            }
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            var window = new LoginWindow();
+
+            window.Show();
+
+            Hide();
         }
     }
 }

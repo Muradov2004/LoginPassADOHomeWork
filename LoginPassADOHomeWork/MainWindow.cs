@@ -16,5 +16,14 @@ namespace LoginPassADOHomeWork
         {
             InitializeComponent();
         }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            var window = new LoginWindow();
+
+            window.Show();
+
+            Hide();
+        }
     }
 }

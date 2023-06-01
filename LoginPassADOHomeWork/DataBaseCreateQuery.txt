@@ -1,5 +1,7 @@
 ﻿CREATE DATABASE Users
 
+USE Users
+
 CREATE TABLE [User](
 	Username nvarchar(50) NOT NULL UNIQUE,
 	[Password] nvarchar(50) NOT NULL,

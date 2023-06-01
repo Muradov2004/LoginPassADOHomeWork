@@ -28,96 +28,96 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.paswordlbl = new System.Windows.Forms.Label();
-            this.emaillbl = new System.Windows.Forms.Label();
-            this.usernamelbl = new System.Windows.Forms.Label();
-            this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.usernameTextBox = new System.Windows.Forms.TextBox();
-            this.backBtn = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            paswordlbl = new Label();
+            emaillbl = new Label();
+            usernamelbl = new Label();
+            emailTextBox = new TextBox();
+            passwordTextBox = new TextBox();
+            usernameTextBox = new TextBox();
+            backBtn = new Button();
+            SuspendLayout();
             // 
             // paswordlbl
             // 
-            this.paswordlbl.AutoSize = true;
-            this.paswordlbl.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.paswordlbl.Location = new System.Drawing.Point(96, 98);
-            this.paswordlbl.Name = "paswordlbl";
-            this.paswordlbl.Size = new System.Drawing.Size(91, 25);
-            this.paswordlbl.TabIndex = 21;
-            this.paswordlbl.Text = "Password";
+            paswordlbl.AutoSize = true;
+            paswordlbl.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            paswordlbl.Location = new Point(96, 98);
+            paswordlbl.Name = "paswordlbl";
+            paswordlbl.Size = new Size(91, 25);
+            paswordlbl.TabIndex = 21;
+            paswordlbl.Text = "Password";
             // 
             // emaillbl
             // 
-            this.emaillbl.AutoSize = true;
-            this.emaillbl.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.emaillbl.Location = new System.Drawing.Point(96, 158);
-            this.emaillbl.Name = "emaillbl";
-            this.emaillbl.Size = new System.Drawing.Size(66, 25);
-            this.emaillbl.TabIndex = 20;
-            this.emaillbl.Text = "e-mail";
+            emaillbl.AutoSize = true;
+            emaillbl.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            emaillbl.Location = new Point(96, 158);
+            emaillbl.Name = "emaillbl";
+            emaillbl.Size = new Size(66, 25);
+            emaillbl.TabIndex = 20;
+            emaillbl.Text = "e-mail";
             // 
             // usernamelbl
             // 
-            this.usernamelbl.AutoSize = true;
-            this.usernamelbl.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.usernamelbl.Location = new System.Drawing.Point(96, 43);
-            this.usernamelbl.Name = "usernamelbl";
-            this.usernamelbl.Size = new System.Drawing.Size(97, 25);
-            this.usernamelbl.TabIndex = 19;
-            this.usernamelbl.Text = "Username";
+            usernamelbl.AutoSize = true;
+            usernamelbl.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            usernamelbl.Location = new Point(96, 43);
+            usernamelbl.Name = "usernamelbl";
+            usernamelbl.Size = new Size(97, 25);
+            usernamelbl.TabIndex = 19;
+            usernamelbl.Text = "Username";
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Enabled = false;
-            this.emailTextBox.Location = new System.Drawing.Point(96, 186);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(169, 23);
-            this.emailTextBox.TabIndex = 18;
+            emailTextBox.Enabled = false;
+            emailTextBox.Location = new Point(96, 186);
+            emailTextBox.Name = "emailTextBox";
+            emailTextBox.Size = new Size(169, 23);
+            emailTextBox.TabIndex = 18;
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Enabled = false;
-            this.passwordTextBox.Location = new System.Drawing.Point(96, 126);
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(169, 23);
-            this.passwordTextBox.TabIndex = 17;
+            passwordTextBox.Enabled = false;
+            passwordTextBox.Location = new Point(96, 126);
+            passwordTextBox.Name = "passwordTextBox";
+            passwordTextBox.Size = new Size(169, 23);
+            passwordTextBox.TabIndex = 17;
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.Enabled = false;
-            this.usernameTextBox.Location = new System.Drawing.Point(96, 71);
-            this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(169, 23);
-            this.usernameTextBox.TabIndex = 16;
+            usernameTextBox.Enabled = false;
+            usernameTextBox.Location = new Point(96, 71);
+            usernameTextBox.Name = "usernameTextBox";
+            usernameTextBox.Size = new Size(169, 23);
+            usernameTextBox.TabIndex = 16;
             // 
             // backBtn
             // 
-            this.backBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.backBtn.Location = new System.Drawing.Point(228, 255);
-            this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(97, 47);
-            this.backBtn.TabIndex = 22;
-            this.backBtn.Text = "BACK";
-            this.backBtn.UseVisualStyleBackColor = true;
+            backBtn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            backBtn.Location = new Point(228, 255);
+            backBtn.Name = "backBtn";
+            backBtn.Size = new Size(97, 47);
+            backBtn.TabIndex = 22;
+            backBtn.Text = "BACK";
+            backBtn.UseVisualStyleBackColor = true;
+            backBtn.Click += backBtn_Click;
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(395, 370);
-            this.Controls.Add(this.backBtn);
-            this.Controls.Add(this.paswordlbl);
-            this.Controls.Add(this.emaillbl);
-            this.Controls.Add(this.usernamelbl);
-            this.Controls.Add(this.emailTextBox);
-            this.Controls.Add(this.passwordTextBox);
-            this.Controls.Add(this.usernameTextBox);
-            this.Name = "MainWindow";
-            this.Text = "MainWindow";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(395, 370);
+            Controls.Add(backBtn);
+            Controls.Add(paswordlbl);
+            Controls.Add(emaillbl);
+            Controls.Add(usernamelbl);
+            Controls.Add(emailTextBox);
+            Controls.Add(passwordTextBox);
+            Controls.Add(usernameTextBox);
+            Name = "MainWindow";
+            Text = "MainWindow";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

@@ -28,95 +28,107 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.paswordlbl = new System.Windows.Forms.Label();
-            this.emaillbl = new System.Windows.Forms.Label();
-            this.usernamelbl = new System.Windows.Forms.Label();
-            this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.usernameTextBox = new System.Windows.Forms.TextBox();
-            this.SignUpBtn = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            paswordlbl = new Label();
+            emaillbl = new Label();
+            usernamelbl = new Label();
+            emailTextBox = new TextBox();
+            passwordTextBox = new TextBox();
+            usernameTextBox = new TextBox();
+            SignUpBtn = new Button();
+            backBtn = new Button();
+            SuspendLayout();
             // 
             // paswordlbl
             // 
-            this.paswordlbl.AutoSize = true;
-            this.paswordlbl.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.paswordlbl.Location = new System.Drawing.Point(97, 114);
-            this.paswordlbl.Name = "paswordlbl";
-            this.paswordlbl.Size = new System.Drawing.Size(91, 25);
-            this.paswordlbl.TabIndex = 15;
-            this.paswordlbl.Text = "Password";
+            paswordlbl.AutoSize = true;
+            paswordlbl.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            paswordlbl.Location = new Point(97, 114);
+            paswordlbl.Name = "paswordlbl";
+            paswordlbl.Size = new Size(91, 25);
+            paswordlbl.TabIndex = 15;
+            paswordlbl.Text = "Password";
             // 
             // emaillbl
             // 
-            this.emaillbl.AutoSize = true;
-            this.emaillbl.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.emaillbl.Location = new System.Drawing.Point(97, 174);
-            this.emaillbl.Name = "emaillbl";
-            this.emaillbl.Size = new System.Drawing.Size(66, 25);
-            this.emaillbl.TabIndex = 14;
-            this.emaillbl.Text = "e-mail";
+            emaillbl.AutoSize = true;
+            emaillbl.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            emaillbl.Location = new Point(97, 174);
+            emaillbl.Name = "emaillbl";
+            emaillbl.Size = new Size(66, 25);
+            emaillbl.TabIndex = 14;
+            emaillbl.Text = "e-mail";
             // 
             // usernamelbl
             // 
-            this.usernamelbl.AutoSize = true;
-            this.usernamelbl.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.usernamelbl.Location = new System.Drawing.Point(97, 59);
-            this.usernamelbl.Name = "usernamelbl";
-            this.usernamelbl.Size = new System.Drawing.Size(97, 25);
-            this.usernamelbl.TabIndex = 13;
-            this.usernamelbl.Text = "Username";
+            usernamelbl.AutoSize = true;
+            usernamelbl.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            usernamelbl.Location = new Point(97, 59);
+            usernamelbl.Name = "usernamelbl";
+            usernamelbl.Size = new Size(97, 25);
+            usernamelbl.TabIndex = 13;
+            usernamelbl.Text = "Username";
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(97, 202);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(169, 23);
-            this.emailTextBox.TabIndex = 12;
+            emailTextBox.Location = new Point(97, 202);
+            emailTextBox.Name = "emailTextBox";
+            emailTextBox.Size = new Size(169, 23);
+            emailTextBox.TabIndex = 12;
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(97, 142);
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(169, 23);
-            this.passwordTextBox.TabIndex = 11;
+            passwordTextBox.Location = new Point(97, 142);
+            passwordTextBox.Name = "passwordTextBox";
+            passwordTextBox.PasswordChar = '*';
+            passwordTextBox.Size = new Size(169, 23);
+            passwordTextBox.TabIndex = 11;
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.Location = new System.Drawing.Point(97, 87);
-            this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(169, 23);
-            this.usernameTextBox.TabIndex = 10;
+            usernameTextBox.Location = new Point(97, 87);
+            usernameTextBox.Name = "usernameTextBox";
+            usernameTextBox.Size = new Size(169, 23);
+            usernameTextBox.TabIndex = 10;
             // 
             // SignUpBtn
             // 
-            this.SignUpBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SignUpBtn.Location = new System.Drawing.Point(181, 247);
-            this.SignUpBtn.Name = "SignUpBtn";
-            this.SignUpBtn.Size = new System.Drawing.Size(85, 37);
-            this.SignUpBtn.TabIndex = 9;
-            this.SignUpBtn.Text = "sign up";
-            this.SignUpBtn.UseVisualStyleBackColor = true;
-            this.SignUpBtn.Click += new System.EventHandler(this.SignUpBtn_Click);
+            SignUpBtn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            SignUpBtn.Location = new Point(191, 247);
+            SignUpBtn.Name = "SignUpBtn";
+            SignUpBtn.Size = new Size(85, 37);
+            SignUpBtn.TabIndex = 9;
+            SignUpBtn.Text = "sign up";
+            SignUpBtn.UseVisualStyleBackColor = true;
+            SignUpBtn.Click += SignUpBtn_Click;
+            // 
+            // backBtn
+            // 
+            backBtn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            backBtn.Location = new Point(87, 247);
+            backBtn.Name = "backBtn";
+            backBtn.Size = new Size(85, 37);
+            backBtn.TabIndex = 16;
+            backBtn.Text = "back";
+            backBtn.UseVisualStyleBackColor = true;
+            backBtn.Click += backBtn_Click;
             // 
             // RegisterWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(358, 369);
-            this.Controls.Add(this.paswordlbl);
-            this.Controls.Add(this.emaillbl);
-            this.Controls.Add(this.usernamelbl);
-            this.Controls.Add(this.emailTextBox);
-            this.Controls.Add(this.passwordTextBox);
-            this.Controls.Add(this.usernameTextBox);
-            this.Controls.Add(this.SignUpBtn);
-            this.Name = "RegisterWindow";
-            this.Text = "RegisterWindow";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(358, 369);
+            Controls.Add(backBtn);
+            Controls.Add(paswordlbl);
+            Controls.Add(emaillbl);
+            Controls.Add(usernamelbl);
+            Controls.Add(emailTextBox);
+            Controls.Add(passwordTextBox);
+            Controls.Add(usernameTextBox);
+            Controls.Add(SignUpBtn);
+            Name = "RegisterWindow";
+            Text = "RegisterWindow";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -128,5 +140,6 @@
         private TextBox passwordTextBox;
         private TextBox usernameTextBox;
         private Button SignUpBtn;
+        private Button backBtn;
     }
 }
