@@ -31,29 +31,34 @@ namespace LoginPassADOHomeWork
         {
             string username = usernameTextBox.Text;
             string password = passwordTextBox.Text;
-            try
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                connection.Open();
+
+                string query = "SELECT COUNT(*) FROM [User] AS U WHERE U.Username = @username AND U.Password = @password";
+                SqlCommand insertQuery = new SqlCommand(query, connection);
+
+                insertQuery.Parameters.AddWithValue("@username", username);
+                insertQuery.Parameters.AddWithValue("@password", password);
+
+                int count = (int)insertQuery.ExecuteScalar();
+
+                if (count > 0)
                 {
-                    connection.Open();
-
-                    string query = "SELECT * FROM [User] AS U WHERE U.Username = @username AND U.Password = [Password]";
-                    SqlCommand insertQuery = new SqlCommand(query, connection);
-
-                    insertQuery.Parameters.AddWithValue("@username", username);
-                    insertQuery.Parameters.AddWithValue("@password", password);
-
-                    insertQuery.ExecuteNonQuery();
+                    var window = new MainWindow(username, password);
+                    window.Show();
+                    Hide();
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
+                else
+                {
+                    MessageBox.Show("Username and password combination does not exist.");
+                    usernameTextBox.Text = string.Empty;
+                    passwordTextBox.Text = string.Empty; 
+                }
 
             }
+
 
         }
     }

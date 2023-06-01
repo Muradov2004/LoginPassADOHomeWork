@@ -42,6 +42,7 @@ namespace LoginPassADOHomeWork
                         insertQuery.Parameters.AddWithValue("@email", email);
 
                         insertQuery.ExecuteNonQuery();
+                        MessageBox.Show("Succesfully registered!");
                     }
                 }
                 catch (Exception ex)
